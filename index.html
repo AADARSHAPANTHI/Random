@@ -1,4 +1,53 @@
-<p>hello</p>
-<p>this is a m=new feature(drop down)</p>
-<p>this is a m=new feature (button)</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Split-Screen Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <div class="split-container">
+    
+    <!-- Left Visual Panel -->
+    <div class="left-panel">
+      <div class="brand-content">
+        <h1>Discover What's Next.</h1>
+        <p>Join a community of thousands of creators and professionals managing their projects effortlessly in one central workspace.</p>
+      </div>
+    </div>
+
+    <!-- Right Form Panel -->
+    <div class="right-panel">
+      <div class="form-box">
+        <h2>Welcome back</h2>
+        <p class="subtitle">New to our platform? <a href="#">Create an account</a></p>
+
+        <form onsubmit="event.preventDefault();">
+          <div class="input-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="you@example.com" required autocomplete="email">
+          </div>
+
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="••••••••" required>
+          </div>
+
+          <div class="form-helpers">
+            <label class="checkbox-container">
+              <input type="checkbox"> Remember me
+            </label>
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn-submit">Sign In</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
