@@ -1,0 +1,203 @@
+/* 1. Global Reset & Base Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+  color: #333;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 2. The Main Split Container */
+.split-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+/* 3. LEFT SIDE: Visual Brand Panel */
+.left-panel {
+  flex: 1;
+  background-image: url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=1200&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 60px;
+}
+
+/* Subtle dark gradient overlay to make text highly readable */
+.left-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%);
+  z-index: 1;
+}
+
+.brand-content {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  max-width: 500px;
+}
+
+.brand-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
+}
+
+.brand-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+/* 4. RIGHT SIDE: Form Panel */
+.right-panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 40px;
+}
+
+.form-box {
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-box h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 35px;
+}
+
+.subtitle a {
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.subtitle a:hover {
+  text-decoration: underline;
+}
+
+/* 5. Input Groups & Styling */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #444;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.input-group input:focus {
+  border-color: #4f46e5;
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+/* Helper Utilities (Forgot Password link align) */
+.form-helpers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.checkbox-container input {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+.forgot-link {
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* Sign In Button */
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-submit:hover {
+  background-color: #4338ca;
+}
+
+.btn-submit:active {
+  transform: scale(0.98);
+}
+
+/* 6. RESPONSIVE LAYOUT (Mobile Optimization) */
+@media (max-width: 900px) {
+  body {
+    overflow: auto; 
+  }
+  .left-panel {
+    display: none;
+  }
+  .right-panel {
+    padding: 30px 20px;
+  }
+}
